@@ -20,7 +20,7 @@ function generateJapaneseQuestion() {
         
         2. use at least one of the following gramatical aspect. 
         2.1. 時制（未来形、過去形、現在分詞、過去分詞、現在進行形）
-        2.2. SVOO or SVOC
+        2.2. 第４文型もしくは第５文型（SVOO or SVOC）
         2.3. 受動態
         2.4. 助動詞
         2.5. 関係代名詞
@@ -137,7 +137,7 @@ function getRandomRows() {
   var filteredRows = values.filter(function(row) {
     var rowDate = new Date(row[0]);
     var score = row[2];
-    return (rowDate < twoWeeksAgo) && (score < 6);
+    return (rowDate < twoWeeksAgo) && (score < 9);
   });
   
   var selectedRows = [];
